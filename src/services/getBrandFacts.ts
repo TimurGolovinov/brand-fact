@@ -42,8 +42,8 @@ export const getBrandFacts = async (
   name: string,
   url: string
 ): Promise<Fact[]> => {
-
   console.log('Research started...')
+  
   // Check edge cases
   if (!name && !url) {
     console.error('Invalid input: ', { name, url });
