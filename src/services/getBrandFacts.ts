@@ -16,7 +16,8 @@ const factSchema =  z.object({
 
 type Fact = z.infer<typeof factSchema>;
 
-const createFactFinderPrompt = (url: string, brandName?: string) => `Find 5-7 interesting, unusual, or lesser-known facts about the brand ${brandName ? `called ` + brandName : 'that owns this website : ' } (website: ${url}).
+const createFactFinderPrompt = (url: string, brandName?: string) => 
+  `Find 5-7 interesting, unusual, or lesser-known facts about the brand ${brandName ? `called ` + brandName : 'that owns this website : ' } (website: ${url}).
         Focus on:
         - Unique history or origin stories
         - Unusual business practices or innovations
@@ -42,9 +43,6 @@ export const getBrandFacts = async (
   name: string,
   url: string
 ): Promise<Fact[]> => {
-  console.log('Research started...')
-  
-  // Check edge cases
   if (!name && !url) {
     console.error('Invalid input: ', { name, url });
     return [];
