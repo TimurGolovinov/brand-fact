@@ -1,0 +1,174 @@
+.facts-container {
+  background: transparent;
+  padding: 0;
+  max-width: 800px;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: left;
+  padding: 2rem 0;
+}
+
+.loading-state .spinner {
+  border: 2px solid #ddd;
+  border-top: 2px solid #1a1a1a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 0 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: #1a1a1a;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.loading-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 300;
+}
+
+.error-state h2 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.error-state p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.brand-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand-header h2 {
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.brand-url {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.875rem;
+  word-break: break-all;
+  border-bottom: 1px solid #1a1a1a;
+  transition: border-color 0.2s;
+}
+
+.brand-url:hover {
+  border-bottom-color: transparent;
+}
+
+.facts-count {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fact-card {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border-left:3px solid #ddd;
+  padding-left: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.fact-card:hover {
+  border-left-color: #1a1a1a;
+}
+
+.fact-content {
+  color: #1a1a1a;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.fact-source {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.source-label {
+  color: #666;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.source-value {
+  color: #666;
+  word-break: break-word;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.source-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.source-link:hover {
+  border-bottom-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .facts-container {
+    padding: 0;
+  }
+
+  .brand-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .fact-card {
+    padding-left: 1rem;
+    border-left-width: 2px;
+  }
+
+  .facts-list {
+    gap: 1.5rem;
+  }
+}
+
