@@ -31,10 +31,10 @@ const createFactFinderPrompt = (url: string, brandName?: string) =>
         2. A source or context (e.g., "According to company history", "Industry reports", "Public records", etc.)
 
         Return your response as a JSON object with a "facts" array. Each item in the array should have:
-        - "content": the fact text
-        - "source": where this information comes from or context
+        - "content": the fact text (do not include links here)
+        - "source": website link
 
-        Example format: {"facts": [{"content": "fact text", "source": "source info"}, ...]}`
+        Example format: {"facts": [{"content": "fact text", "source": "https://google.com..."}, ...]}`
 
         
 
