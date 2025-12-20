@@ -115,7 +115,7 @@ export default function FactsDisplay({ brand, facts, isLoading, error }) {
               <div className="fact-source">
                 <span className="source-label">Source:</span>
                 <span className="source-value">
-                  <a href={fact.source}>
+                  <a href={fact.source} target="_blank" rel="noopener noreferrer" className="brand-url">
                     {fact.source}
                   </a>
                 </span>
